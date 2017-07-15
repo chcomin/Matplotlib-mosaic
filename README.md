@@ -50,7 +50,7 @@ mosaic.saveState('mosaic.dat')
 
 Loading a previously saved mosaic (load-state interface)
 
-```
+```python
 
 import mpl_mosaic
 
