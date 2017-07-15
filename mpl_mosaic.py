@@ -20,21 +20,24 @@ class PlotMosaic:
 	y : array_like
 		y values for main plot
 	plotsData : array_like
-		Data used for plotting the draggable axes. The i-th element of plotsData corresponds to the i-th point 
-		in the main plot
+		Data used for plotting the draggable axes. The i-th element of plotsData corresponds 
+		to the i-th point in the main plot
 	dragPlotter : function
-		Function with arguments (data, ax), where data contains the information for plotting and ax is an axis instance. 
-		This function is used for plotting the draggable axes
+		Function with arguments (data, ax), where data contains the information for plotting 
+		and ax is an axis instance. This function is used for plotting the draggable axes
 	figSize : tuple of two integers
 		Figure size in inches
 	mainAxesRect : tuple of four integers
-		Main axes position in the format [left, bottom, width, height]. Unit is figure coordinates between 0 and 1
+		Main axes position in the format [left, bottom, width, height]. Unit is figure 
+		coordinates between 0 and 1
 	dragAxesSize : tuple of two integers
-		Size of the draggable axes i nthe format [width, height]. Unit is figure coordinates between 0 and 1
+		Size of the draggable axes i nthe format [width, height]. Unit is figure coordinates 
+		between 0 and 1
 	pickerRadius : float
 		Radius for point picking detection		
 	showMovement : bool
-		Set to true for showing data while dragging the plot. False hides the data while dragging
+		Set to true for showing data while dragging the plot. False hides the data while 
+		dragging
 	mainPlotKwargs : dict
 		Dictionary containing drawing properties for the main axes
 
