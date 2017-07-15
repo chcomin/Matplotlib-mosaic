@@ -18,6 +18,7 @@ Creating the plot mosaic from scratch (zero-state interface)
 ```python
 
 import mpl_mosaic
+import numpy as np
 
 # Function used for creating the smaller plots. It receives a data 
 # object and an axes. The function plots the data using a matplotlib 
