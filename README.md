@@ -12,28 +12,36 @@ Creating the plot mosaic from scratch (zero-state interface)
 
 ```python
 
-# Function used for creating the smaller plots	
+# Function used for creating the smaller plots. It receives a data 
+# object and an axes. The function plots the data using a matplotlib 
+# function
 def plotFunc(data, ax):
 	x = data[0]
 	y = data[1]
 	ax.plot(x, y, 'o', ms=3)
 
-
-points = np.random.rand(10, 2)				# Points in the main axes
+# Generate 10 points for the main axes
+points = np.random.rand(10, 2)				
 x, y = zip(*points)
-allData = np.random.rand(10, 2, 100)			# Data corresponding to each point in the main axes
-colors = np.random.rand(10)				# Color of each point
 
+# Generate some colors for the points
+colors = np.random.rand(10)		
+
+# Set some properties for points in the main axes
 mainPlotKwargs = {'marker':'^', 'c':colors, 'cmap':'hot'}
+
+# Generate 10 arrays of 100 points, each array corresponding to 
+# a point in the main axes
+allData = np.random.rand(10, 2, 100)
+
 mosaic = PlotMosaic(x, y, allData, dragPlotter=plotFunc, mainPlotKwargs=mainPlotKwargs)
 
-
-# You can save the mosaic for latter use, as shown below
+# You can save the mosaic for latter use
 mosaic.saveState('mosaic.dat')
 
 ```
 
-Loading a previously saved mosaic
+Loading a previously saved mosaic (load-state interface)
 
 ```
 
