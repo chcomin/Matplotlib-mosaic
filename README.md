@@ -2,6 +2,7 @@
 
 Create plot mosaic. Example:
 
+![Example](example.gif)
 
 The class has two interfaces. The zero-state interface is used for creating a new plot mosaic. The load-state interface is used for loading a previously saved mosaic.
 
