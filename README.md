@@ -21,7 +21,8 @@ import mpl_mosaic
 
 # Function used for creating the smaller plots. It receives a data 
 # object and an axes. The function plots the data using a matplotlib 
-# function
+# function. The function below receives the variable data containing 
+# two lists, corresponding to x and y positions.
 def plotFunc(data, ax):
 	x = data[0]
 	y = data[1]
@@ -56,4 +57,13 @@ import mpl_mosaic
 
 mosaic = mpl_mosaic.PlotMosaic('mosaic.dat')
 
+```
+
+Quick note, if you want the draggable plot to contain images, you can set the plotting function as
+
+```python
+
+def plotFunc(img, ax):
+	ax.imshow(img)
+		
 ```
