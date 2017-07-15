@@ -6,6 +6,11 @@ Create plot mosaic. Example:
 
 The class has two interfaces. The zero-state interface is used for creating a new plot mosaic. The load-state interface is used for loading a previously saved mosaic.
 
+Dependencies:
+
+* Numpy
+* Matplotlib
+
 ## Example usage
 
 Creating the plot mosaic from scratch (zero-state interface)
