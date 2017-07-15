@@ -17,6 +17,8 @@ Creating the plot mosaic from scratch (zero-state interface)
 
 ```python
 
+import mpl_mosaic
+
 # Function used for creating the smaller plots. It receives a data 
 # object and an axes. The function plots the data using a matplotlib 
 # function
@@ -39,7 +41,7 @@ mainPlotKwargs = {'marker':'^', 'c':colors, 'cmap':'hot'}
 # a point in the main axes
 allData = np.random.rand(10, 2, 100)
 
-mosaic = PlotMosaic(x, y, allData, dragPlotter=plotFunc, mainPlotKwargs=mainPlotKwargs)
+mosaic = mpl_mosaic.PlotMosaic(x, y, allData, dragPlotter=plotFunc, mainPlotKwargs=mainPlotKwargs)
 
 # You can save the mosaic for latter use
 mosaic.saveState('mosaic.dat')
@@ -50,6 +52,8 @@ Loading a previously saved mosaic (load-state interface)
 
 ```
 
-mosaic = PlotMosaic('mosaic.dat')
+import mpl_mosaic
+
+mosaic = mpl_mosaic.PlotMosaic('mosaic.dat')
 
 ```
